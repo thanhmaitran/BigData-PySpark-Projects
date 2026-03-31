@@ -1,7 +1,52 @@
-# Python cache
+# =========================
+# Python
+# =========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Output folder
-diabetes_prediction/output/
-house_prices_prediction/output/
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Environment
+# =========================
+.env
+venv/
+env/
+
+# =========================
+# Spark / Hadoop
+# =========================
+*.crc
+*.log
+metastore_db/
+spark-warehouse/
+
+# =========================
+# Output (BIG DATA PROJECT)
+# =========================
+output/
+
+# =========================
+# Model files
+# =========================
+*.parquet
+*.model
+*.bin
+
+# =========================
+# Images (optional)
+# =========================
+*.png
+*.jpg
+*.jpeg
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
