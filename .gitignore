@@ -1,0 +1,7 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Output folder
+diabetes_prediction/output/
+house_prices_prediction/output/
