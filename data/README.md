@@ -54,6 +54,39 @@ These CSV files are meant to be used in a **distributed computing environment** 
 - Ensure numeric columns are correctly typed for ML processing.  
 
 ---
+## How to Use
+
+These datasets can be uploaded to **HDFS** for Big Data processing.
+
+### Step 1: Create HDFS directory
+
+```bash
+hdfs dfs -mkdir -p /data
+hdfs dfs -put data/diabetes.csv /data/
+```
+### Step 2: Upload datasets to HDFS
+```bash
+hdfs dfs -put data/diabetes.csv /data/
+hdfs dfs -put data/house_prices_dataset.csv /data/
+```
+### Step 3: Verify files
+```bash
+hdfs dfs -ls /data
+# Should show:
+# diabetes.csv
+# house_prices_dataset.csv
+```
+### Step 4: Access from PySpark
+```bash
+data_path_diabetes = "hdfs://m1:9000/data/diabetes.csv"
+data_path_house = "hdfs://m1:9000/data/house_prices_dataset.csv"
+```
+### Optional: Download files back from HDFS
+```bash
+hdfs dfs -get /data/diabetes.csv ./data/
+hdfs dfs -get /data/house_prices_dataset.csv ./data/
+```
+----
 ## Notes
 Local CSV files are optional, mainly for reference.
 For production or large-scale experiments, always use HDFS as the source.
@@ -64,18 +97,3 @@ data/
 ├── diabetes.csv
 └── house_prices_dataset.csv
 
-## How to Use
-
-These datasets can be uploaded to **HDFS** for Big Data processing.
-
-### Step 1: Create HDFS directory
-
-```bash
-hdfs dfs -mkdir -p /data
-hdfs dfs -put data/diabetes.csv /data/
-hdfs dfs -put data/house_prices_dataset.csv /data/
-hdfs dfs -ls /data
-data_path_diabetes = "hdfs://m1:9000/data/diabetes.csv"
-data_path_house = "hdfs://m1:9000/data/house_prices_dataset.csv"
-hdfs dfs -get /data/diabetes.csv ./data/
-hdfs dfs -get /data/house_prices_dataset.csv ./data/
