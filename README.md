@@ -26,7 +26,7 @@ HDFS → Spark (PySpark) → Data Processing → ML Pipeline → Evaluation → 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Apache Spark (PySpark)**
 * **Hadoop Distributed File System (HDFS)**
@@ -57,7 +57,7 @@ HDFS → Spark (PySpark) → Data Processing → ML Pipeline → Evaluation → 
 
 ---
 
-## ⚙️ Workflow Summary
+## Workflow Summary
 
 1. Load data from HDFS
 2. Perform data cleaning and preprocessing
